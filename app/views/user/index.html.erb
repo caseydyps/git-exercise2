@@ -8,7 +8,9 @@
   <% @users.each do |user| %>
     <tr>
       <td><%= user.name %></td>
- 
+        <% if user.is_admin? %>
+          <td>Admin</td>
+        <% end %>
     </tr>
   <% end %>
 </table>
